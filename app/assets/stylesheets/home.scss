@@ -1,0 +1,95 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$dark: #393E46;
+$cyan: #00ADB5;
+$light: #FFF4E0;
+$yellow: #F8B500;
+$red: #FC3C3C;
+
+body {
+    margin: 0px;
+    display: grid;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+nav {
+    display: grid;
+    background-color: $light;
+    width: 100%;
+    display: block;
+
+    ul {   
+        text-align: center;
+
+        li {
+            display: inline-block;
+            background-color: white;
+            
+            a { 
+                display: block;
+                color: black;
+                text-decoration: none; 
+                padding: 15px;
+            }
+
+            &:hover{
+                background-color: $cyan;
+            }
+        }
+    }
+}
+
+header {
+    display: grid;
+
+    width: 100%;
+    background-color: $dark;
+    color: $light;
+
+    text-align: center;
+}
+
+footer {
+    display: grid;
+
+    width: 100%;
+    background-color: $dark;
+    color: $yellow;
+
+    text-align: center;
+}
+
+article {
+    background-color: $light;
+    display: grid;
+
+    padding: 15px;
+
+    section {
+        .projects {
+            padding: 0px;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-gap: 10px;
+
+            grid-template-areas:
+                "header header header"
+                "content content content"
+                "footer footer footer";
+
+            .project {
+                list-style: none;
+                background-color: $yellow;
+            }
+        }
+    }
+}
+
+aside {
+    display: grid;
+}

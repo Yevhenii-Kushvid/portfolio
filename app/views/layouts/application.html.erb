@@ -10,6 +10,16 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header><%= render partial: 'layouts/header' %></header>
+
+    <nav><%= render partial: 'layouts/navigation' %></nav>
+    
+    <article>
+      <%= yield %>
+    </article>
+
+    <aside><%= render partial: 'layouts/navigation' %></aside>
+
+    <footer><%= render partial: 'layouts/footer' %></footer>
   </body>
 </html>
